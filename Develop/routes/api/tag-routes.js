@@ -44,8 +44,6 @@ catch (err) {
       res.status(400).json(err);
     }
 });
-Tag.create(req.body)
-   .then((tag) => res.status(200).json(tag));
 
 
 router.put('/:id', (req, res) => {

@@ -44,14 +44,6 @@ try {
 }
 });
 
-Category.create(req.body)
-   .then((category) => res.status(200).json(Category))
-   .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
-   });
-
-
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
   Category.update(req.body, {
